@@ -1,0 +1,98 @@
+/* --- Basic Reset & Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex; /* ใช้ Flexbox เพื่อจัดกึ่งกลาง container */
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: flex-start; /* จัดกึ่งกลางแนวตั้งด้านบน */
+    min-height: 100vh; /* ทำให้ body สูงเต็มหน้าจออย่างน้อย */
+    padding: 20px; /* เพิ่ม padding รอบๆ หน้า */
+}
+
+/* --- Container Styles --- */
+.container {
+    max-width: 900px; /* กำหนดความกว้างสูงสุดของ container */
+    width: 100%; /* ให้ container ขยายเต็มความกว้างที่มี */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* จัด h1 และ input ให้อยู่ตรงกลาง */
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 25px;
+}
+
+/* --- Input Field Styles --- */
+.input-wrap {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px; /* จำกัดความกว้างของช่องค้นหา */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* ลบเส้นขอบเมื่อ focus */
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+/* --- Image Gallery & Message Box Styles --- */
+.canvas {
+    margin-top: 20px;
+}
+
+.imagegallery {
+    display: grid; /* ใช้ CSS Grid เพื่อจัดเรียงรูปภาพ */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* กำหนดคอลัมน์แบบ Responsive */
+    gap: 15px; /* ช่องว่างระหว่างรูปภาพ */
+    /* ถ้าคุณต้องการ Masonry layout (แบบ Pinterest) จะต้องใช้ JS library หรือ CSS Columns */
+    /* สำหรับตอนนี้ Grid ธรรมดาจะช่วยให้รูปภาพเรียงกันได้ดี */
+}
+
+.image-item {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden; /* ซ่อนส่วนเกินของรูปภาพ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex; /* ใช้ flex เพื่อจัดรูปภาพให้อยู่ตรงกลางภายใน item */
+    justify-content: center;
+    align-items: center;
+    height: auto; /* กำหนดความสูงเริ่มต้นของ item (ปรับได้) */
+}
+
+.image-item img {
+    max-width: 100%;
+    max-height: 100%; /* ทำให้รูปภาพไม่ล้นขอบ */
+    object-fit: contain; /* ปรับรูปภาพให้พอดีโดยไม่ถูกตัด */
+    display: block; /* ลบช่องว่างใต้รูปภาพ */
+}
+
+.message-box {
+    padding: 20px;
+    background-color: #f8d7da; /* สีแดงอ่อนสำหรับข้อความผิดพลาด */
+    color: #721c24; /* สีข้อความ */
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none; /* ซ่อนไว้เริ่มต้น */
+}
+
+.message-box.visible {
+    display: block; /* แสดงเมื่อมีคลาส visible */
+}
