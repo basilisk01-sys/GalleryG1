@@ -10,22 +10,22 @@ body {
     line-height: 1.6;
     background-color: #ffffff;
     color: #333;
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    min-height: 100vh;
-    padding: 20px;
+    display: flex; /* ใช้ Flexbox เพื่อจัดกึ่งกลาง container */
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: flex-start; /* จัดกึ่งกลางแนวตั้งด้านบน */
+    min-height: 100vh; /* ทำให้ body สูงเต็มหน้าจออย่างน้อย */
+    padding: 20px; /* เพิ่ม padding รอบๆ หน้า */
 }
 
 /* --- Container Styles --- */
 .container {
-    max-width: auto;
-    width: 100%;
+    max-width: auto; /* กำหนดความกว้างสูงสุดของ container */
+    width: 100%; /* ให้ container ขยายเต็มความกว้างที่มี */
     background-color: #ffffff;
     
     /* border-radius: 8px; */
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    text-align: center;
+    text-align: center; /* จัด h1 และ input ให้อยู่ตรงกลาง */
 }
 
 h1 {
@@ -41,24 +41,24 @@ h1 {
     padding-top: 10px;
     padding-bottom: 20px;
     background-color: rgb(255, 255, 255);
-    width: auto; 
-    max-width: auto; 
+    width: auto; /* ให้ input ขยายเต็มความกว้าง */
+    max-width: auto; /* จำกัดความกว้างสูงสุดของ input */
     
 }
 .input-wrap .text {
     font-size: 18px;
     color: #0056b3;
-    margin-bottom: 5px; 
+    margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างข้อความและ input */
 }
 
 #searchInput {
     width: 100%;
-    max-width: auto;
+    max-width: auto; /* จำกัดความกว้างของช่องค้นหา */
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    outline: none; 
+    outline: none; /* ลบเส้นขอบเมื่อ focus */
     
 }
 
@@ -72,12 +72,14 @@ h1 {
 }
 
 .imagegallery {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 15px; 
-    padding: 10px;
-    justify-items: center;
-    
+    display: grid; /* ใช้ CSS Grid เพื่อจัดเรียงรูปภาพ */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* กำหนดคอลัมน์แบบ Responsive */
+    gap: 15px; /* ช่องว่างระหว่างรูปภาพ */
+    padding: 10px; /* เพิ่ม padding รอบๆ grid */
+    justify-items: center; /* จัดรูปภาพให้อยู่ตรงกลางในแต่ละ
+
+    /* ถ้าคุณต้องการ Masonry layout (แบบ Pinterest) จะต้องใช้ JS library หรือ CSS Columns */
+    /* สำหรับตอนนี้ Grid ธรรมดาจะช่วยให้รูปภาพเรียงกันได้ดี */
 }
 
 .image-item {
@@ -85,10 +87,10 @@ h1 {
     border-radius: 8px;
     overflow: hidden; /* ซ่อนส่วนเกินของรูปภาพ */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    display: flex; 
+    display: flex; /* ใช้ flex เพื่อจัดรูปภาพให้อยู่ตรงกลางภายใน item */
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: auto; /* กำหนดความสูงเริ่มต้นของ item (ปรับได้) */
 }
 
 .image-item img {
@@ -111,3 +113,4 @@ h1 {
 .message-box.visible {
     display: block; /* แสดงเมื่อมีคลาส visible */
 }
+
