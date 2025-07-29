@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'BKM88', src: 'https://i.postimg.cc/wT7tPYFM/image.jpg', tags: ['BKM88','ลืมรหัส'] },
         { name: 'BKM88', src: 'https://i.postimg.cc/YqZ4BDy3/image.jpg', tags: ['BKM88','สมัคร'] },
         // { name: '', src: '', tags: ['','เปลี่ยนไอดี'] },
-        { name: '', src: 'https://i.postimg.cc/pLjmWQwt/image.jpg', tags: ['','เพิ่มบัญชี'] },
+        { name: 'BKM88', src: 'https://i.postimg.cc/pLjmWQwt/image.jpg', tags: ['BKM88','เพิ่มบัญชี'] },
         // FAH999
         { name: 'FAH999', src: 'https://i.postimg.cc/DzFPgKCG/image.jpg', tags: ['','ฝาก'] },
         { name: 'FAH999', src: 'https://i.postimg.cc/s2c9H08N/image.jpg', tags: ['FAH999','พันธมิตร'] },
